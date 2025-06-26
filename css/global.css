@@ -1,0 +1,166 @@
+.app{
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-90);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &.background-purple{
+        background-color: var(--color-primary);
+    }
+
+    &.background-gray{
+        background-color: var(--color-background);
+    }
+}
+
+.logo{
+    width: 132px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+/* ─── HEADINGS ─── */
+
+.heading-1{
+    color: var(--color-text-90);
+    font-size: 2.75rem;
+    font-style: normal;
+    font-weight: 590;
+    line-height: normal;
+    letter-spacing: -0.408px;
+}
+
+/* ─── BUTTONS ─── */
+
+.button-primary{
+    color: var(--color-foreground);
+    background-color: var(--color-accent);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.button-secondary{
+    color: var(--color-accent);
+    background-color: var(--color-foreground);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &.has-border{
+        border: 1px solid var(--color-accent);
+    }
+}
+
+.button-setup{
+    display: flex;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 1rem;
+    background: #F5F5F5;
+    text-align: left;
+}
+
+.button-rounded{
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: var(--color-foreground);
+    color: var(--color-text-90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+        &.has-shadow{
+            box-shadow: 0px 2px 4px 0px rgba(41, 38, 111, 0.15);
+        }
+}
+
+.button-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-90);
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.warning-box{
+    background-color: var(--color-warning-background);
+    color: var(--color-warning-text);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ─── STEP 0 ─── */
+
+.illustration{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ─── STEP 1 ─── */
+
+.bottom-card{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-foreground);
+    border-radius: 32px 32px 0px 0px;
+    box-shadow: 0px 0px 40px -15px rgba(41, 38, 111, 0.15);
+}
+
+
+/* ─── STEP 4 ─── */
+
+.steps-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.75rem;
+
+    .step{
+        width: 1fr;
+        flex-grow: 1;
+        height: 0.5rem;
+        background-color: var(--color-secondary);
+        border-radius: 0.25rem;
+        &.active{
+            background-color: var(--color-accent);
+        }
+    }
+}

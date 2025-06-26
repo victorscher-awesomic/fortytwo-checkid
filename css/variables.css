@@ -1,0 +1,16 @@
+:root {
+    --color-primary: #504AC3;
+    --color-secondary: #E5E3FF;
+    --color-accent: #4E46E5 ;
+
+    --color-text-90: rgba(0, 0, 0, 0.90);
+    --color-text-80: rgba(0, 0, 0, 0.80);
+    --color-text-70: rgba(0, 0, 0, 0.70);
+    --color-text-alternative: #fff;
+
+    --color-foreground: #ffffff;
+    --color-background: #F8F8F8;
+
+    --color-warning-background: #FFFFD7;
+    --color-warning-text: #625200;
+}
