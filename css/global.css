@@ -16,6 +16,10 @@
     &.background-gray{
         background-color: var(--color-background);
     }
+
+    &.background-gradient{
+        background: linear-gradient(152deg, #F5F5FF 27.57%, #C9C6F4 122.24%);
+    }
 }
 
 .logo{
@@ -84,6 +88,15 @@
     border-radius: 1rem;
     background: #F5F5F5;
     text-align: left;
+
+    &.active{
+        background-color: var(--color-accent);
+        color: white;
+        
+        .text-color-muted{
+            color: white;
+        }
+    }
 }
 
 .button-rounded{
@@ -106,6 +119,8 @@
 .button-icon{
     width: 1.5rem;
     height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +128,25 @@
     background-color: var(--color-secondary);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.list-bullet{
+    width: 1.75rem;
+    height: 1.75rem;
+    max-width: 1.75rem;
+    max-height: 1.75rem;
+    min-width: 1.75rem;
+    min-height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    
+    span{
+        line-height: 1rem;
+    }
 }
 
 .warning-box{
@@ -140,7 +174,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-foreground);
-    border-radius: 32px 32px 0px 0px;
+    border-radius: 2rem 2rem 0px 0px;
     box-shadow: 0px 0px 40px -15px rgba(41, 38, 111, 0.15);
 }
 
@@ -164,3 +198,40 @@
         }
     }
 }
+
+/* ─── PASSWORD ─── */
+
+/* position utilities if you don’t have them yet */
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+
+ .password-component input {
+    border: 1px solid var(--color-neutral);
+    border-radius: var(--spacing-small);
+  }
+  .password-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text-muted);
+  }
+  .password-rule {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--spacing-xlarge);
+    background-color: var(--color-background);
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.750rem;
+    font-weight: 500;
+  }
+  .password-rule.valid {
+    background-color: rgba(95, 61, 220, 0.1);
+    color: var(--color-accent);
+  }
+  .password-rule.valid::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin-right: 0;
+    background-image: url(../assets/icons/Check.svg);
+  }

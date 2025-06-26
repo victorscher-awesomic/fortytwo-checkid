@@ -8,6 +8,10 @@ html, body {
   line-height: 1.5;
 }
 
+html, body, div, section, button, input, form{
+    box-sizing: border-box;
+}
+
 img, svg {
   max-width: 100%;
   height: auto;
@@ -20,6 +24,7 @@ button {
 
 a {
   text-decoration: none;
+  color: var(--color-text-90);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -201,6 +206,7 @@ p{
 .text-size-base     { font-size: 1rem;     }
 .text-size-large    { font-size: 1.25rem;  }
 .text-size-xlarge    { font-size: 1.50rem;  }
+.text-size-xxlarge    { font-size: 4.5rem;  }
 
 .text-weight-light  { font-weight: 300; }
 .text-weight-normal { font-weight: 400; }
@@ -251,3 +257,9 @@ p{
 
 .background-color-primary    { background-color: var(--color-foreground); }
 .background-color-secondary  { background-color: var(--color-background); }
+
+/* ─── STEP 7 ─── */
+
+.rocket-illustration{
+  width: 160px;
+}
