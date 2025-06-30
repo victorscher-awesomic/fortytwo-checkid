@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="../css/step-1.css">
 </head>
 
-<body>
-    <main class="app background-gray">
+<body class="background-gray">
+    <main class="app">
         <div class="container display-flex flex-direction-column padding-vertical-large">
             <div class="display-flex flex-direction-column grid-gap-medium">
                 <button class="button-rounded">
                     <img src="../assets/icons/arrow-bend-up-left.svg" alt="">
                 </button>
-    
+
                 <h1 class="heading-1">Welcome, <span id="user-name">Christopher</span></h1>
 
                 <p class="font-size-large text-weight-semibold text-color-purple">Let’s get your account set up.</p>
             </div>
-        
+
         </div>
 
         <div class="bottom-card">
             <div class="container display-flex flex-direction-column grid-gap-medium padding-vertical-large">
-                
+
                 <div class="display-flex flex-direction-column  gap-medium">
                     <div class="display-flex flex-direction-row justify-content-space-between align-items-center">
                         <span class="text-transform-uppercase text-weight-bold">Step 1</span>
@@ -36,12 +36,12 @@
                             <button class="button-rounded has-shadow">
                                 <img src="../assets/icons/speaker-high.svg" alt="">
                             </button>
-                            <button class="button-rounded has-shadow">
+                            <button id="open-modal" class="button-rounded has-shadow">
                                 <img src="../assets/icons/question-icon.svg" alt="">
                             </button>
                         </div>
                     </div>
-    
+
                     <div class="steps-wrapper">
                         <div class="step active"></div>
                         <div class="step"></div>
@@ -51,18 +51,22 @@
 
                 <p class="text-size-xlarge">Install Microsoft Authenticator</p>
 
-                <img class="align-self-center box-shadow border-radius-large" width="72" src="../assets/microsoft-authenticator-logo.png" alt="">
+                <img class="align-self-center box-shadow border-radius-large" width="72"
+                    src="../assets/microsoft-authenticator-logo.png" alt="">
 
                 <div class="display-flex flex-direction-column gap-large">
-                    <a href="https://apps.apple.com/br/app/microsoft-authenticator/id983156458?l=pt&culture=pt-br&country=br" target="_blank" class="button-secondary has-border">
+                    <a href="https://apps.apple.com/br/app/microsoft-authenticator/id983156458?l=pt&culture=pt-br&country=br"
+                        target="_blank" class="button-secondary has-border">
                         <span>Download on the Apple Store</span>
                     </a>
 
                     <div class="display-flex flex-direction-row gap-medium padding-medium warning-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.5306 16.2806L17.0306 20.7806C16.8899 20.9214 16.699 21.0004 16.5 21.0004C16.301 21.0004 16.1101 20.9214 15.9694 20.7806C15.8286 20.6399 15.7496 20.449 15.7496 20.25C15.7496 20.051 15.8286 19.8601 15.9694 19.7194L19.1897 16.5H8.25C6.6587 16.5 5.13258 15.8679 4.00736 14.7426C2.88214 13.6174 2.25 12.0913 2.25 10.5C2.25 8.9087 2.88214 7.38258 4.00736 6.25736C5.13258 5.13214 6.6587 4.5 8.25 4.5H16.5C16.6989 4.5 16.8897 4.57902 17.0303 4.71967C17.171 4.86032 17.25 5.05109 17.25 5.25C17.25 5.44891 17.171 5.63968 17.0303 5.78033C16.8897 5.92098 16.6989 6 16.5 6H8.25C7.05653 6 5.91193 6.47411 5.06802 7.31802C4.22411 8.16193 3.75 9.30653 3.75 10.5C3.75 11.6935 4.22411 12.8381 5.06802 13.682C5.91193 14.5259 7.05653 15 8.25 15H19.1897L15.9694 11.7806C15.8286 11.6399 15.7496 11.449 15.7496 11.25C15.7496 11.051 15.8286 10.8601 15.9694 10.7194C16.1101 10.5786 16.301 10.4996 16.5 10.4996C16.699 10.4996 16.8899 10.5786 17.0306 10.7194L21.5306 15.2194C21.6004 15.289 21.6557 15.3717 21.6934 15.4628C21.7312 15.5538 21.7506 15.6514 21.7506 15.75C21.7506 15.8486 21.7312 15.9462 21.6934 16.0372C21.6557 16.1283 21.6004 16.211 21.5306 16.2806Z" fill="#625200"/>
-                            </svg>
-                        <p>When you're ready, return here to complete your account setup.</p> 
+                            <path
+                                d="M21.5306 16.2806L17.0306 20.7806C16.8899 20.9214 16.699 21.0004 16.5 21.0004C16.301 21.0004 16.1101 20.9214 15.9694 20.7806C15.8286 20.6399 15.7496 20.449 15.7496 20.25C15.7496 20.051 15.8286 19.8601 15.9694 19.7194L19.1897 16.5H8.25C6.6587 16.5 5.13258 15.8679 4.00736 14.7426C2.88214 13.6174 2.25 12.0913 2.25 10.5C2.25 8.9087 2.88214 7.38258 4.00736 6.25736C5.13258 5.13214 6.6587 4.5 8.25 4.5H16.5C16.6989 4.5 16.8897 4.57902 17.0303 4.71967C17.171 4.86032 17.25 5.05109 17.25 5.25C17.25 5.44891 17.171 5.63968 17.0303 5.78033C16.8897 5.92098 16.6989 6 16.5 6H8.25C7.05653 6 5.91193 6.47411 5.06802 7.31802C4.22411 8.16193 3.75 9.30653 3.75 10.5C3.75 11.6935 4.22411 12.8381 5.06802 13.682C5.91193 14.5259 7.05653 15 8.25 15H19.1897L15.9694 11.7806C15.8286 11.6399 15.7496 11.449 15.7496 11.25C15.7496 11.051 15.8286 10.8601 15.9694 10.7194C16.1101 10.5786 16.301 10.4996 16.5 10.4996C16.699 10.4996 16.8899 10.5786 17.0306 10.7194L21.5306 15.2194C21.6004 15.289 21.6557 15.3717 21.6934 15.4628C21.7312 15.5538 21.7506 15.6514 21.7506 15.75C21.7506 15.8486 21.7312 15.9462 21.6934 16.0372C21.6557 16.1283 21.6004 16.211 21.5306 16.2806Z"
+                                fill="#625200" />
+                        </svg>
+                        <p>When you're ready, return here to complete your account setup.</p>
                     </div>
 
                     <a href="./step-05.html" class="button-primary">
@@ -72,7 +76,38 @@
 
             </div>
         </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="display-flex align-items-center justify-content-space-between">
+                    <span class="text-transform-uppercase text-weight-bold">Step 1</span>
+
+                    <button class="button-rounded close-modal">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.7233 14.5274C16.8994 14.7035 16.9984 14.9424 16.9984 15.1915C16.9984 15.4405 16.8994 15.6794 16.7233 15.8555C16.5472 16.0317 16.3083 16.1306 16.0592 16.1306C15.8102 16.1306 15.5713 16.0317 15.3952 15.8555L10.435 10.8938L5.47331 15.854C5.29719 16.0301 5.05832 16.129 4.80924 16.129C4.56017 16.129 4.3213 16.0301 4.14518 15.854C3.96906 15.6778 3.87012 15.439 3.87012 15.1899C3.87012 14.9408 3.96906 14.702 4.14518 14.5258L9.1069 9.56569L4.14674 4.60397C3.97062 4.42785 3.87168 4.18898 3.87168 3.93991C3.87168 3.69084 3.97062 3.45197 4.14674 3.27584C4.32286 3.09972 4.56173 3.00078 4.81081 3.00078C5.05988 3.00078 5.29875 3.09972 5.47487 3.27584L10.435 8.23756L15.3967 3.27506C15.5729 3.09894 15.8117 3 16.0608 3C16.3099 3 16.5487 3.09894 16.7249 3.27506C16.901 3.45118 16.9999 3.69005 16.9999 3.93913C16.9999 4.1882 16.901 4.42707 16.7249 4.60319L11.7631 9.56569L16.7233 14.5274Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="display-flex flex-direction-column align-items-end gap-large margin-top-large">
+                    <div class="display-flex flex-direction-column gap-medium">
+                        <p class="text-weight-bold">Download and install the Microsoft Authenticator app on your
+                            phone.</p>
+
+                        <p class="text-color-muted">Your workplace requires secure login with multi-factor authentication, and this app is
+                            necessary to complete that setup.</p>
+                    </div>
+
+                    <button class="button-primary close-modal">Got It!</button>
+                </div>
+
+            </div>
+        </div>
     </main>
+
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-.app{
+.app {
     font-family: 'Inter', sans-serif;
     color: var(--color-text-90);
     margin: 0;
@@ -8,32 +8,34 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    &.background-purple{
-        background-color: var(--color-primary);
-    }
-
-    &.background-gray{
-        background-color: var(--color-background);
-    }
-
-    &.background-gradient{
-        background: linear-gradient(152deg, #F5F5FF 27.57%, #C9C6F4 122.24%);
-    }
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.logo{
+.background-purple {
+    background-color: var(--color-primary);
+}
+
+.background-gray {
+    background-color: var(--color-background);
+}
+
+.background-gradient {
+    background: linear-gradient(152deg, #F5F5FF 27.57%, #C9C6F4 122.24%);
+}
+
+.logo {
     width: 132px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 600px;
     padding: 0 2rem;
 }
 
 /* ─── HEADINGS ─── */
 
-.heading-1{
+.heading-1 {
     color: var(--color-text-90);
     font-size: 2.75rem;
     font-style: normal;
@@ -44,7 +46,7 @@
 
 /* ─── BUTTONS ─── */
 
-.button-primary{
+.button-primary {
     color: var(--color-foreground);
     background-color: var(--color-accent);
     border: none;
@@ -59,7 +61,7 @@
     gap: 0.5rem;
 }
 
-.button-secondary{
+.button-secondary {
     color: var(--color-accent);
     background-color: var(--color-foreground);
     border: none;
@@ -73,12 +75,12 @@
     justify-content: center;
     gap: 0.5rem;
 
-    &.has-border{
+    &.has-border {
         border: 1px solid var(--color-accent);
     }
 }
 
-.button-setup{
+.button-setup {
     display: flex;
     padding: 1.5rem 1rem;
     align-items: center;
@@ -89,17 +91,17 @@
     background: #F5F5F5;
     text-align: left;
 
-    &.active{
+    &.active {
         background-color: var(--color-accent);
         color: white;
-        
-        .text-color-muted{
+
+        .text-color-muted {
             color: white;
         }
     }
 }
 
-.button-rounded{
+.button-rounded {
     width: 3rem;
     height: 3rem;
     padding: 0.75rem;
@@ -111,12 +113,13 @@
     justify-content: center;
     cursor: pointer;
     border: none;
-        &.has-shadow{
-            box-shadow: 0px 2px 4px 0px rgba(41, 38, 111, 0.15);
-        }
+
+    &.has-shadow {
+        box-shadow: 0px 2px 4px 0px rgba(41, 38, 111, 0.15);
+    }
 }
 
-.button-icon{
+.button-icon {
     width: 1.5rem;
     height: 1.5rem;
     min-width: 1.5rem;
@@ -130,7 +133,7 @@
     cursor: pointer;
 }
 
-.list-bullet{
+.list-bullet {
     width: 1.75rem;
     height: 1.75rem;
     max-width: 1.75rem;
@@ -143,13 +146,13 @@
     color: var(--color-accent);
     background-color: var(--color-secondary);
     border-radius: 50%;
-    
-    span{
+
+    span {
         line-height: 1rem;
     }
 }
 
-.warning-box{
+.warning-box {
     background-color: var(--color-warning-background);
     color: var(--color-warning-text);
     padding: 1rem;
@@ -163,37 +166,43 @@
 
 /* ─── STEP 0 ─── */
 
-.illustration{
+.illustration {
     max-width: 80%;
     margin: 0 auto;
 }
 
 /* ─── STEP 1 ─── */
 
-.bottom-card{
+.bottom-card {
     width: 100%;
     height: 100%;
     background-color: var(--color-foreground);
     border-radius: 2rem 2rem 0px 0px;
     box-shadow: 0px 0px 40px -15px rgba(41, 38, 111, 0.15);
+
+    @media screen and (min-width: 600px) {
+        height: auto;
+        border-radius: 2rem;
+    }
 }
 
 
 /* ─── STEP 4 ─── */
 
-.steps-wrapper{
+.steps-wrapper {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     gap: 0.75rem;
 
-    .step{
+    .step {
         width: 1fr;
         flex-grow: 1;
         height: 0.5rem;
         background-color: var(--color-secondary);
         border-radius: 0.25rem;
-        &.active{
+
+        &.active {
             background-color: var(--color-accent);
         }
     }
@@ -202,36 +211,90 @@
 /* ─── PASSWORD ─── */
 
 /* position utilities if you don’t have them yet */
-.position-relative { position: relative; }
-.position-absolute { position: absolute; }
+.position-relative {
+    position: relative;
+}
 
- .password-component input {
+.position-absolute {
+    position: absolute;
+}
+
+.password-component input {
     border: 1px solid var(--color-neutral);
     border-radius: var(--spacing-small);
-  }
-  .password-toggle {
+}
+
+.password-toggle {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     color: var(--color-text-muted);
-  }
-  .password-rule {
+}
+
+.password-rule {
     padding: var(--spacing-small) var(--spacing-medium);
     border-radius: var(--spacing-xlarge);
     background-color: var(--color-background);
     transition: background-color 0.2s, color 0.2s;
     font-size: 0.750rem;
     font-weight: 500;
-  }
-  .password-rule.valid {
+}
+
+.password-rule.valid {
     background-color: rgba(95, 61, 220, 0.1);
     color: var(--color-accent);
-  }
-  .password-rule.valid::before {
+}
+
+.password-rule.valid::before {
     content: "";
     width: 14px;
     height: 14px;
     margin-right: 0;
     background-image: url(../assets/icons/Check.svg);
-  }
+}
+
+/* ─── MODAL ─── */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    &.active {
+        display: flex;
+    }
+
+    &.active .modal-content {
+        animation: slideIn 0.3s ease-out forwards;
+    }
+}
+
+.modal-content {
+    background-color: var(--color-foreground);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 2px 4px rgba(41, 38, 111, 0.15);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

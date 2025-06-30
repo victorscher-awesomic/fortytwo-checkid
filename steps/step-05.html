@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="../css/step-1.css">
 </head>
 
-<body>
-    <main class="app background-gray">
-
+<body class="background-gray">
+    <main class="app">
         <div class="bottom-card margin-top-large">
             <div class="container display-flex flex-direction-column grid-gap-medium padding-vertical-large">
 
@@ -24,7 +23,7 @@
                             <button class="button-rounded has-shadow">
                                 <img src="../assets/icons/speaker-high.svg" alt="">
                             </button>
-                            <button class="button-rounded has-shadow">
+                            <button id="open-modal" class="button-rounded has-shadow">
                                 <img src="../assets/icons/question-icon.svg" alt="">
                             </button>
                         </div>
@@ -80,7 +79,8 @@
 
                     <div class="display-flex flex-direction-row gap-medium">
                         <div class="list-bullet"> <span class="text-size-small">2</span></div>
-                        <span class="text-size-small">Click the <span class="text-weight-bold">+</span> button and choose <span class="text-weight-bold">Work or School account.</span></span>
+                        <span class="text-size-small">Click the <span class="text-weight-bold">+</span> button and
+                            choose <span class="text-weight-bold">Work or School account.</span></span>
                     </div>
 
                     <div class="display-flex flex-direction-row gap-medium">
@@ -117,7 +117,38 @@
 
             </div>
         </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="display-flex align-items-center justify-content-space-between">
+                    <span class="text-transform-uppercase text-weight-bold">Step 2</span>
+
+                    <button class="button-rounded close-modal">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.7233 14.5274C16.8994 14.7035 16.9984 14.9424 16.9984 15.1915C16.9984 15.4405 16.8994 15.6794 16.7233 15.8555C16.5472 16.0317 16.3083 16.1306 16.0592 16.1306C15.8102 16.1306 15.5713 16.0317 15.3952 15.8555L10.435 10.8938L5.47331 15.854C5.29719 16.0301 5.05832 16.129 4.80924 16.129C4.56017 16.129 4.3213 16.0301 4.14518 15.854C3.96906 15.6778 3.87012 15.439 3.87012 15.1899C3.87012 14.9408 3.96906 14.702 4.14518 14.5258L9.1069 9.56569L4.14674 4.60397C3.97062 4.42785 3.87168 4.18898 3.87168 3.93991C3.87168 3.69084 3.97062 3.45197 4.14674 3.27584C4.32286 3.09972 4.56173 3.00078 4.81081 3.00078C5.05988 3.00078 5.29875 3.09972 5.47487 3.27584L10.435 8.23756L15.3967 3.27506C15.5729 3.09894 15.8117 3 16.0608 3C16.3099 3 16.5487 3.09894 16.7249 3.27506C16.901 3.45118 16.9999 3.69005 16.9999 3.93913C16.9999 4.1882 16.901 4.42707 16.7249 4.60319L11.7631 9.56569L16.7233 14.5274Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="display-flex flex-direction-column align-items-end gap-large margin-top-large">
+                    <div class="display-flex flex-direction-column gap-medium">
+                        <p class="text-weight-bold">Add your account to the Microsoft Authenticator app.</p>
+
+                        <p class="text-color-muted">Open the app, tap <span class="text-weight-bold">Add account</span>,
+                            choose <span class="text-weight-bold">Work</span> or <span
+                                class="text-weight-bold">School</span> account, and enter the information shown below.
+                        </p>
+                    </div>
+
+                    <button class="button-primary close-modal">Got It!</button>
+                </div>
+
+            </div>
     </main>
+
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
