@@ -41,12 +41,12 @@
 
                 <!-- Password‐Field Component -->
                 <div class="password-component margin-top-medium">
-                    <label for="passwordInput" class="text-size-base text-weight-semibold text-color-primary">
+                    <label for="password-input" class="text-size-base text-weight-semibold text-color-primary">
                         Create Password
                     </label>
 
                     <div class="position-relative width-full margin-top-small margin-bottom-medium">
-                        <input id="passwordInput" type="password" class="width-full padding-medium text-size-base"
+                        <input id="password-input" type="password" class="width-full padding-medium text-size-base"
                             placeholder="••••••••••••••" aria-describedby="passwordRules" />
 
                         <button type="button" class="password-toggle position-absolute"
@@ -61,7 +61,8 @@
                         </button>
                     </div>
 
-                    <div id="passwordRules" class="display-flex flex-direction-row flex-wrap gap-small margin-top-small">
+                    <div id="passwordRules"
+                        class="display-flex flex-direction-row flex-wrap gap-small margin-top-small">
                         <div class="password-rule display-inline-flex align-items-center gap-small text-color-body"
                             data-rule="length">8 characters</div>
                         <div class="password-rule display-inline-flex align-items-center gap-small text-color-body"
@@ -87,8 +88,8 @@
                     </div>
 
                     <div class="display-flex flex-direction-column gap-medium">
-                        <a href="step-07.html" class="button-primary">
-                            <span>Account Added – Complete setup</span>
+                        <a id="set-password" class="button-primary">
+                            <span>Set password and complete setup</span>
                         </a>
 
                         <a href="step-05.html" class="button-secondary has-border">
@@ -118,7 +119,8 @@
                     <div class="display-flex flex-direction-column gap-medium">
                         <p class="text-weight-bold">Set up your password.</p>
 
-                        <p class="text-color-muted">To add an extra layer of security, your workplace requires a traditional password. Choose a strong password and complete the setup.</p>
+                        <p class="text-color-muted">To add an extra layer of security, your workplace requires a
+                            traditional password. Choose a strong password and complete the setup.</p>
                     </div>
 
                     <button class="button-primary close-modal">Got It!</button>
@@ -126,6 +128,19 @@
 
             </div>
     </main>
+
+    <div id="progress-overlay" class="overlay" aria-hidden="true">
+        <div class="overlay-box" role="dialog" aria-modal="true" aria-labelledby="progress-title">
+            <h3 id="progress-title" class="overlay-title">Setting up your account…</h3>
+
+            <div class="progress" aria-label="Progress" aria-live="polite">
+                <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+            </div>
+
+            <p class="progress-text"><span id="progress-value">0</span>%</p>
+        </div>
+    </div>
+
     <script src="../js/modal.js"></script>
     <script src="../js/validatePassword.js"></script>
 </body>
